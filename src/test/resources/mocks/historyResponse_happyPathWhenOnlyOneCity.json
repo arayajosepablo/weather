@@ -1,0 +1,11 @@
+{
+  "averageTemp":-0.15,
+  "averagePressure":1000.0,
+  "history":[
+    {
+      "temp":-0.15,
+      "pressure":1000.0,
+      "umbrella":false
+    }
+  ]
+}
