@@ -1,14 +1,14 @@
 # Weather Application
 
-##Assumptions
+## Assumptions
 - Temperature and pressure are considered doubles
 
-##How to run the microservice
+## How to run the microservice
 - First: the jar file should be created, run the command `mvn clean install`.
 - Second: the Docker image should be built, run the command `docker build -t tenera .`.
 - Last: run the created image, use the command: `docker run -p 8080:8080 tenera`.
 
-##Endpoints:
+## Endpoints:
 In order the get the data from the microservice the next endpoints can be used with the included CURL commands.
 ### 1. GET /current?location=Berlin
 Gets the data from Open Weather external service and parses it to a more readable format.
@@ -29,7 +29,7 @@ curl --location --request GET 'localhost:8080/v1/weather/history?location=berlin
 --header 'Content-Type: application/json'
 ```
 
-##Approach to build the solution
+## Approach to build the solution
 
 ### Table
 - weather_conditions
@@ -62,7 +62,7 @@ created_timestamp | timestamp without time zone |
 - Use a cache service for the historical data.
 - Do not expose the OpenWeather API key as plain text.
 
-##Production ready micro service
+## Production ready micro service
 - It should be containerized, using tools as Docker.
 - It should have a defined CI/CD pipeline where the tests are runs, and if everything is OK the image is built, and deploy.
 - The CI/CD pipeline should contain define steps, for instance: first deploy to dev, then promote to stage, then promote to production (the number of envs could vary).
